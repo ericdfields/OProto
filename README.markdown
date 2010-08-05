@@ -18,15 +18,15 @@ Creating pages for your site with OProto is as simple as defining a router and a
 
 Your routers live in **myapp.rb** and look like this
 
-  get '/' do
-    haml :index
-  end
+    get '/' do
+      haml :index
+    end
   
 The respecting view template could be found at ./views/index.haml. Adding a new template is as easy as adding the following router
 
-  get '/index2' do
-    haml :index2
-  end
+    get '/index2' do
+      haml :index2
+    end
   
 and adding index2.haml to ./views
 
@@ -40,10 +40,10 @@ Index: The Example
 -------------
 **index.haml** is your main page. It starts off with some page-specific variables the wrapper looks for, like so:
 
-  -@title = 'Index Page'
-  -@h1 = 'Headline'
-  -@h2 = 'Subheadline'
+    -@title = 'Index Page'
+    -@h1 = 'Headline'
+    -@h2 = 'Subheadline'
 
 Adding content to be injected into the layout is as easy as adding the following
 
-  %p Lorem ipsum!
+    %p Lorem ipsum!
