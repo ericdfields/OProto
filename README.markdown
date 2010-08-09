@@ -2,7 +2,7 @@ About OProto
 =============
 OProto is a barebones skeleton of a basic website for the purpose of bootstrapping a prototype. 
 
-The goal of all prototypes are to demonstrate an idea as quickly as possible using the best tools for the job. In the case of OProto, those tools are Ruby on Rails, Sinatra, Haml, Sass and jQuery.
+The goal of all prototypes are to demonstrate an idea as quickly as possible using the best tools for the job. In the case of OProto, those tools are Ruby on Rails, StaticMatic, Haml, Sass and jQuery.
 
 Technology overview
 -------------
@@ -20,7 +20,7 @@ Assuming you have Rails and Ruby Gems…
 
 … clone this project…
 
-    git@github.com:ericdfields/OProto.git my_project_name
+    $ git clone git@github.com:ericdfields/OProto.git my_project_name
 
 … and run staticmatic on your project
 
