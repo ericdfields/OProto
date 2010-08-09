@@ -1,0 +1,4 @@
+%header.main-header
+  %h1= @siteName
+  %nav.main-nav
+    = menubar ['Home', '/'], ['Special', '/special'], :selected => { :class => 'current', :item => :li }

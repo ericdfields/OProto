@@ -1,0 +1,11 @@
+- @siteName = "Site Name"
+!!! 5
+%html
+  %head
+    %title= @pageTitle+" | "+@siteName
+    = stylesheets :screen, :media => :screen
+    = stylesheets :typography, :media => :screen
+    = stylesheets :forms, :media => :screen
+    = stylesheets :print, :media => :print
+    = javascripts('jquery-1.4.2.min')
+    <!--[if lte IE 8]><script>(function(){var e="abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i]);}}());</script><![endif]-->

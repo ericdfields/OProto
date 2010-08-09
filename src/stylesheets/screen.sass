@@ -1,0 +1,49 @@
+// Put your generic stite styles in this stylesheet
+
+// Variables
+$grey: #DCDCDC
+
+// Reset
+body,img,h1,h2,h3,h4,h5
+  margin: 0
+  padding: 0
+  list-style: none
+  border: 0
+
+// Initialize HTML5
+header,hgroup,footer,nav,aside,section
+  display: block
+
+body
+  background: $grey
+  
+body.special
+  background: pink
+  
+.container
+  background: lighten($grey,10%)
+  width: 1024px
+  margin: 40px auto
+  -webkit-border-radius: 8px
+  -moz-border-radius: 8px
+  border-radius: 8px
+  
+.inner
+  padding: 10px
+
+.main-content
+  overflow: auto
+
+.main-section,.main-rail
+  float: left
+
+.main-section
+  width: 66%
+  
+.main-rail
+  width: 33%
+  
+.main-rail .inner
+  padding:
+    left: 20px
+    right: 20px
