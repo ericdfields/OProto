@@ -7,7 +7,7 @@ The goal of all prototypes are to demonstrate an idea as quickly as possible usi
 Technology overview
 -------------
 * [Ruby on Rails](http://rubyonrails.org) - That thing you heard about
-* [Sinatra](http://sinatrarb.org) - Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort
+* [StaticMatic](http://staticmatic.rubyforge.org/) - Static websites, the modern way
 * [Haml](http://haml-lang.com) - Lean, poetic markup
 * [Sass](http://sass-lang.com) - Super sexy css
 * [jQuery](http://jquery.com) - Our Savior
@@ -16,50 +16,53 @@ Getting Started
 -------------
 Assuming you have Rails and Ruby Gems…
 
-    $ gem install sinatra
+    $ gem install staticmatic
 
 … clone this project…
 
-    git@github.com:ericdfields/OProto.git
+    git@github.com:ericdfields/OProto.git my_project_name
 
-… and run myapp.rb
+… and run staticmatic on your project
 
-    $ ruby myapp.rb
+    $ staticmatic preview my_project_name
 
-You can visit your site at [http://localhost:4567](http://localhost:4567).
+You can visit your site at [http://localhost:3000](http://localhost:3000).
+
+OProto Source Overview
+-------------
+* *site* - mostly where your output files will live if you choose to export your project
+  * *images* - image resources
+  * *javascripts* - Javascript resources
+  * *stylesheets* - stylesheet resources
+* *src* - where you'll do all your real work
+  * *helpers* - [http://staticmatic.rubyforge.org/helper_central/](StaticMatic Helpers)
+  * *layouts* - base templates for your pages
+  * *pages* - individual page content, inherits a template, haml-formatted
+  * *partials* - reusable blocks of code used in both pages and layouts
+  * *stylesheets* - sass-formatted stylesheets
+  
 
 Using OProto
 -------------
-Creating pages for your site with OProto is as simple as defining a router and adding a matching view template.
+Creating pages for your site with OProto is as simple as adding a new haml file to the src/pages directory. *index.haml* will live at /. *special.haml* will live at /special. *special/even.haml* will live at /special/event.
 
-Your routers live in **myapp.rb** and look like this
+By default, all pages use the *layouts/application.haml* layout template. You can use custom layouts by defining the **@layout** variable at the top of your page. For example, in special.haml:
 
-    get '/' do
-      haml :index
-    end
+    - @layout = "special"
+
+/special now uses the layout template *layouts/special.haml*.
+
+Similarly, you can set up variables in your layout templates or partials and define them in a page:
+
+    - @pageTitle = "Special Event Page Title"
+    - @h2 = "Special Event Headline"
+    - @h3 = "Special Event Subheadline"
+    
+Will help us set the <title> tag value, headline, and subheadline found elsewhere in the template tree.
   
-The respecting view template could be found at ./views/index.haml. Adding a new template is as easy as adding the following router
-
-    get '/index2' do
-      haml :index2
-    end
-  
-and adding index2.haml to ./views
-
-Layout.haml
+Roadmap
 -------------
-**layout.haml** is your wrapper template. All other templates are simply partial pieces of content that will be injected into layout. You're sharing a common header (and <head>), container, and footer across all your pages.
-
-I'm working on how we'd go about adding additional wrapper templates.
-
-Index: The Example
--------------
-**index.haml** is your main page. It starts off with some page-specific variables the wrapper looks for, like so:
-
-    -@title = 'Index Page'
-    -@h1 = 'Headline'
-    -@h2 = 'Subheadline'
-
-Adding content to be injected into the layout is as easy as adding the following
-
-    %p Lorem ipsum!
+Next up:
+* partials for widgets (slideshow, drop downs, etc)
+* more templates (common product page, web app, etc)?
+* Blueprint CSS frameworks?
