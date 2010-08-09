@@ -16,6 +16,7 @@ Technology overview
 * [Haml](http://haml-lang.com) - Lean, poetic markup
 * [Sass](http://sass-lang.com) - Super sexy css
 * [Blueprint](http://www.blueprintcss.org/) - Blueprint gives you a solid foundation to build your project on top of, with an easy-to-use grid, sensible typography, useful plugins, and even a stylesheet for printing.
+* [Fancy Buttons](http://github.com/imathis/fancy-buttons/) - Fancy CSS Buttons
 * [jQuery](http://jquery.com) - Our Savior
 
 Getting Started
@@ -23,6 +24,7 @@ Getting Started
 Assuming you have Rails and Ruby Gems (staticmatic should take care of haml/sass requirement)…
 
     $ gem install compass
+    $ gem install fancy-buttons
     $ gem install staticmatic --pre
 
 … clone this project…
