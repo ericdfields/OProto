@@ -2,21 +2,28 @@ About OProto
 =============
 OProto is a barebones skeleton of a basic website for the purpose of bootstrapping a prototype. 
 
-The goal of all prototypes are to demonstrate an idea as quickly as possible using the best tools for the job. In the case of OProto, those tools are Ruby on Rails, StaticMatic, Haml, Sass and jQuery.
+The goal of all prototypes are to demonstrate an idea as quickly as possible using the best tools for the job. In the case of OProto, those tools are Ruby on Rails, StaticMatic, Compass, Haml, Sass and jQuery.
+
+UPDATE
+-------------
+We now rely on StaticMatic alpha for Compass support. Yay!
 
 Technology overview
 -------------
 * [Ruby on Rails](http://rubyonrails.org) - That thing you heard about
 * [StaticMatic](http://staticmatic.rubyforge.org/) - Static websites, the modern way
+* [Compass](http://compass-style.org/) - Compass provides ports of the best of breed css frameworks that you can use without forcing you to use their presentational class names.
 * [Haml](http://haml-lang.com) - Lean, poetic markup
 * [Sass](http://sass-lang.com) - Super sexy css
+* [Blueprint](http://www.blueprintcss.org/) - Blueprint gives you a solid foundation to build your project on top of, with an easy-to-use grid, sensible typography, useful plugins, and even a stylesheet for printing.
 * [jQuery](http://jquery.com) - Our Savior
 
 Getting Started
 -------------
-Assuming you have Rails and Ruby Gems…
+Assuming you have Rails and Ruby Gems (staticmatic should take care of haml/sass requirement)…
 
-    $ gem install staticmatic
+    $ gem install compass
+    $ gem install staticmatic --pre
 
 … clone this project…
 
@@ -44,7 +51,7 @@ OProto Source Overview
 
 Using OProto
 -------------
-Creating pages for your site with OProto is as simple as adding a new haml file to the src/pages directory. *index.haml* will live at /. *special.haml* will live at /special. *special/even.haml* will live at /special/event.
+Creating pages for your site with OProto is as simple as adding a new haml file to the src/pages directory. *index.haml* will live at /. *special.haml* will live at /special. *special/event.haml* will live at /special/event.
 
 By default, all pages use the *layouts/application.haml* layout template. You can use custom layouts by defining the **@layout** variable at the top of your page. For example, in special.haml:
 

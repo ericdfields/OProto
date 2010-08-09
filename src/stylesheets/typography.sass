@@ -1,18 +1,30 @@
 // Put your typography styles in this stylesheet
-
-// Variables
-$black: #313232
-
 body
-  color: $black
-  font: 13px/1.4 Helvetica, Arial, sans-serif
+  color: $oBlack
 h1
-  font-size: 36px
+  color: $oBlue
 h2
-  font-size: 24px 
+  color: $oOrange
 h3
   font-size: 18px
+  color: $oSemiBlack
 h4
   font-size: 15px
 h5
   font-size: 1em
+  text-transform: uppercase
+
+// LoVe HAte
+a:link
+  color: darken($oTeal,20%)
+a:visited
+  color: $oTeal
+a:hover
+  color: $oOrange
+a:active
+  color: $oSemiBlack
+  
+// Generic Content
+p,li
+  margin:
+    bottom: 1em

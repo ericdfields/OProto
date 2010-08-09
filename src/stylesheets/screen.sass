@@ -1,27 +1,19 @@
 // Put your generic stite styles in this stylesheet
-
-// Variables
-$grey: #DCDCDC
-
-// Reset
-body,img,h1,h2,h3,h4,h5
-  margin: 0
-  padding: 0
-  list-style: none
-  border: 0
+@import "base"
+@import "typography"
+@import "forms"
 
 // Initialize HTML5
 header,hgroup,footer,nav,aside,section
   display: block
 
 body
-  background: $grey
-  
-body.special
-  background: pink
+  background: lighten($oGrey,20%)
+  .special
+    background: pink
   
 .container
-  background: lighten($grey,10%)
+  background: white
   width: 1024px
   margin: 40px auto
   -webkit-border-radius: 8px
@@ -42,8 +34,7 @@ body.special
   
 .main-rail
   width: 33%
-  
-.main-rail .inner
-  padding:
-    left: 20px
-    right: 20px
+  .inner
+    padding:
+      left: 20px
+      right: 20px
