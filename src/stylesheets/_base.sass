@@ -13,6 +13,12 @@ $oTan: #BCBA94
 $oTeal: #5A938C
 $font-color: #333
 
+// Typography
+// -----------------------------------------
+$blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
+$blueprint-fixed-font-family: "andale mono", "lucida console", monospace
+$blueprint-font-size: 12px
+
 // Grids
 // -----------------------------------------
 
@@ -23,6 +29,10 @@ $blueprint-grid-columns : 24
 $blueprint-grid-width   : 30px
 // The amount of margin between columns
 $blueprint-grid-margin  : 10px
+$column-full: $blueprint-grid-columns
+$column-half: $blueprint-grid-columns/2
+$column-third: $blueprint-grid-columns/3
+$column-quarter: $blueprint-grid-columns/4
 
 // Constants
 // $blueprint-grid-outer-width: 40px //($blueprint_grid_width + $blueprint_grid_margin)
@@ -33,22 +43,34 @@ $blueprint-grid-margin  : 10px
 // …from compass
 @import compass/reset
 @import compass/utilities
+@import compass/css3
 
 // …from fancy-buttons
 @import fancy-buttons
 
 // …from blueprint
 // (all styles)
-@import blueprint
-+blueprint
+//@import blueprint
+//+blueprint
 
 // Individual styles (uncomment above)
 // @import blueprint/colors
 // @import blueprint/debug
 // @import blueprint/form
-// @import blueprint/grid
+@import blueprint/grid
 // @import blueprint/ie
 // @import blueprint/interaction
 // @import blueprint/print
-// @import blueprint/typography
-// @import blueprint/utilities
+@import blueprint/typography
+@import blueprint/utilities
+
+// CSS3 
+// Configurable Variables
+// -----------------------------------------
+// Border-Radius
+$default-border-radius: 8px
+// Transitions
+$default-transition-property: all
+$default-transition-duration: 0.25s
+$default-transition-function: ease-out
+$default-transition-delay: false

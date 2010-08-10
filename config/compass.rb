@@ -6,7 +6,7 @@ require 'fancy-buttons'
 # images_dir        = "site/images"       # final images
 # output_style      = :compact            # CSS is nice and compact
 
-line_comments = false                   # Tight
+# line_comments = false                   # Tight
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

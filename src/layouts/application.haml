@@ -1,14 +1,15 @@
 = partial('head')
 %body.index
   .container
-    .inner
-      = partial('main_header')
-      .main-content
-        %section.main-section
-          %article
-            %hgroup
-              %h2= @h2
-              %h3= @h3
-            = yield
+    %header.main-header
+      .inner
+        = partial('main_header')
+    %section.main-section
+      .inner
+        = yield
+    %aside.main-rail
+      .inner
         = partial('main_rail')
-      = partial('main_footer')
+    %footer.main-footer
+      .inner
+        = partial('main_footer')

@@ -1,19 +1,19 @@
 // Put your typography styles in this stylesheet
+
++blueprint-typography-defaults
+
 body
   color: $oBlack
+  +blueprint-typography-body
 h1
   color: $oBlue
 h2
   color: $oOrange
 h3
-  font-size: 18px
   color: $oSemiBlack
-h4
-  font-size: 15px
-h5
-  font-size: 1em
-  text-transform: uppercase
 
+a
+  +transition()
 // LoVe HAte
 a:link
   color: darken($oTeal,20%)
@@ -23,8 +23,3 @@ a:hover
   color: $oOrange
 a:active
   color: $oSemiBlack
-  
-// Generic Content
-p,li
-  margin:
-    bottom: 1em

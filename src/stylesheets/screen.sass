@@ -3,38 +3,58 @@
 @import "typography"
 @import "forms"
 
-// Initialize HTML5
-header,hgroup,footer,nav,aside,section
-  display: block
++reset-html5
 
 body
   background: lighten($oGrey,20%)
-  .special
-    background: pink
+body.special
+  background: pink
   
 .container
+  +container
+  +border-radius() // can also do by corners w/ custom vertical radius: border-radius(TL TR BR BL,TL TR BR BL)
+  +box-shadow(rgba(0,0,0,0.25),0,3px,3px,0) // box-shadow($color, $hoff, $voff, $blur, $spread, $inset)
   background: white
-  width: 1024px
   margin: 40px auto
-  -webkit-border-radius: 8px
-  -moz-border-radius: 8px
-  border-radius: 8px
+
+.main-header,.main-footer
+  +column($column-full)
   
-.inner
-  padding: 10px
-
-.main-content
-  overflow: auto
-
-.main-section,.main-rail
-  float: left
-
 .main-section
-  width: 66%
+  +column(($column-third*2))
   
 .main-rail
-  width: 33%
-  .inner
-    padding:
-      left: 20px
-      right: 20px
+  +column($column-third,true)
+  
+.inner
+  padding: 20px
+  
+.main-header 
+  background: $oBlue
+  h1
+    color: white
+  nav ul 
+    +reset-box-model
+    +reset-list-style
+    overflow: auto
+    li
+      float: left
+      margin-right: 1em
+      a
+        color: white
+        text-decoration: none
+        padding: 4px 8px
+        display: block
+        +border-radius(4px)
+        font: 
+          weight: bold
+          size: larger
+        text-shadow: 1px 1px 0 darken($oBlue,20%)
+      a:hover
+        background: darken($oBlue,5%)
+      a.current
+        background: darken($oBlue,10%)
+
+.main-footer
+  background: $oOrange
+  color: white
