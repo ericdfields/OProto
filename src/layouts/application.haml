@@ -1,15 +1,17 @@
-= partial('head')
-%body.index
-  .container
-    %header.main-header
-      .inner
-        = partial('main_header')
-    %section.main-section
-      .inner
-        = yield
-    %aside.main-rail
-      .inner
-        = partial('main_rail')
-    %footer.main-footer
-      .inner
-        = partial('main_footer')
+!!! 5
+%html
+  = partial('head')
+  %body.index
+    .container
+      %header.main-header
+        .inner
+          = partial('main_header')
+      %section.main-section
+        .inner
+          = yield
+      %aside.main-rail
+        .inner
+          = partial('main_rail')
+      %footer.main-footer
+        .inner
+          = partial('main_footer')
