@@ -1,3 +1,8 @@
 // Put your forms styles in this stylesheet
 button
-  +fancy-button($oBlue, 25px, 4px, 2px)
+  +fancy-button-structure
+  +fancy-button-colors($oBlue)
+  +fancy-button-size(14px,4px,1px)
+button:active
+  border-width: 2px
+  +fancy-button-size(14px,4px,2px)

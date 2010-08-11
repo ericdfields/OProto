@@ -29,6 +29,9 @@ $.fn.extend({
 
 // Set up Simplemodal
 $.extend($.modal.defaults, {
+  opacity: 75,
+  overlayClose: true,
+  closeHTML: '<a href="#" title="Close">Close</a>',
   // open behavior
   onOpen: function(dialog) {
     dialog.overlay.fadeIn('slow',function() {
@@ -46,19 +49,6 @@ $.extend($.modal.defaults, {
     })
   }
 })
-// This is how you use simplemodal
-// // generic simplemodal click
-// $('.overlay').click(function(){
-//   $('#modalContent').modal();
-//   return false;
-// });
-// // positioned simplemodal click
-// $('.positioned-overlay').click(function(){
-//   $('#modalContent').modal({
-//     position: ['0px',0]
-//   });
-//   return false;
-// });
 
 // page load scripts
 

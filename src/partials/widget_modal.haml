@@ -1,0 +1,10 @@
+%p
+  %a.overlay{:href => "#"} Trigger Modal
+#modalContent.js_hide
+  %p Here's some content in a modal
+  = img "http://placehold.it/350x150" 
+:javascript
+  $('.overlay').click(function(){
+    $('#modalContent').modal();
+    return false;
+  });

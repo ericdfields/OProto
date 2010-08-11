@@ -42,9 +42,8 @@ in the blink of an eye!
 
 # Getting Started with OProto
 
-Assuming you have Git, Rails and Ruby Gems (staticmatic should take care of haml/sass requirement)…
+Assuming you have Git, Rails and Ruby Gems (staticmatic should take care of haml/sass, compass)…
 
-    $ gem install compass
     $ gem install fancy-buttons
     $ gem install staticmatic --pre
 
