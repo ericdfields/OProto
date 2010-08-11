@@ -50,7 +50,7 @@ Assuming you have Git, Rails and Ruby Gems (staticmatic should take care of haml
 
 … clone this project…
 
-    $ git clone http://github.com/ericdfields/OProto.git my_project_name
+    $ git clone git://github.com/ericdfields/OProto.git my_project_name
 
 … and run staticmatic on your project
 
