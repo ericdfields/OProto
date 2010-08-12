@@ -52,3 +52,17 @@ $.extend($.modal.defaults, {
 
 // page load scripts
 
+
+// Set up Slidesow
+$(document).ready(function(){
+	$(".slidetabs").tabs(".slides > div", {
+		effect: 'fade',
+		fadeOutSpeed: "slow",
+		rotate: true
+	}).slideshow();
+});
+
+// Set up Tabs
+$(document).ready(function(){
+	$("ul.tabs").tabs("div.panes > div");
+});

@@ -1,9 +1,8 @@
 - @siteName = "Site Name"
 %head
   %title= @pageTitle+" | "+@siteName
-  = stylesheets :screen, :media => :screen
+  = stylesheets :loader, :media => :screen
   %link(href="/javascripts/lib/polypage/skins/default.css" rel="stylesheet")
-  = stylesheets :print, :media => :print
   %script document.write('<style>.js_hide {display: none}</style>');
   = javascripts('lib/jquery-1.4.2.min')
   = javascripts('lib/jquery.tools.min')

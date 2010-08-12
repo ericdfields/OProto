@@ -1,0 +1,18 @@
+.slideshow-wrapper
+  .slideshow
+    %a.backward prev
+    .slides
+      %div Slide 1...
+      %div Slide 2...
+      %div Slide3...
+    %a.forward next
+  
+    .slidetabs-wrapper
+      .slidetabs
+        %a{:href => "#"}
+        %a{:href => "#"}
+        %a{:href => "#"}
+        
+    .slidecontrols
+      %button{:onClick => '$(".slidetabs").data("slideshow").play();'} Play
+      %button{:onClick => '$(".slidetabs").data("slideshow").stop();'} Stop
