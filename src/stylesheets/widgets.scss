@@ -1,0 +1,175 @@
+// Simplemodal
+// =============================== //
+.simplemodal-overlay {
+  background: black; }
+
+.simplemodal-container {
+  width: 660px;
+  height: 340px;
+  background: white;
+  @include box-shadow;
+  position: relative;
+  text-align: center; }
+
+.simplemodal-close:link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  background: $oTeal;
+  color: white;
+  text-decoration: none;
+  font-size: smaller;
+  padding: 0 4px; }
+
+.simplemodal-close:hover {
+  background: $oOrange; }
+
+.overlay,.overlay:link {
+  @include fancy-button-structure;
+  @include fancy-button-colors($oBlue);
+  @include fancy-button-size(18px, 4px, 2px);
+  color: white; }
+
+// =============================== //
+
+// Slideshow
+// =============================== //
+
+.slideshow-wrapper {
+  width: 100%;
+  overflow: auto;
+  clear: both; }
+
+.slideshow {
+  float: left; }
+
+.slides {
+  background: white;
+  @include box-shadow;
+  border: 1px solid gray;
+  @include border-radius;
+  position: relative;
+  height: 300px;
+  width: 400px;
+  float: left;
+  margin: 15px;
+  cursor: pointer;
+  div {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; } }
+
+.slidetabs-wrapper {
+  overflow: auto;
+  clear: both;
+  width: 100%; }
+
+.slidetabs {
+  width: 45px;
+  margin: 0 auto;
+  a {
+    width: 8px;
+    height: 8px;
+    float: left;
+    margin: 3px;
+    background: red;
+    display: block;
+    font-size: 1px; }
+  a:hover {
+    background: blue; }
+  a.current {
+    background: yellow; } }
+
+.slidecontrols {
+  margin-top: 5px;
+  text-align: center; }
+
+.backward, .forward {
+  float: left;
+  background: red;
+  display: block;
+  cursor: pointer;
+  margin-top: 160px; }
+
+// =============================== //
+
+// Tabs
+// =============================== //
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  border-bottom: 1px solid gray;
+  li {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  a {
+    float: left;
+    font-size: 13px;
+    display: block;
+    padding: 5px 30px;
+    text-decoration: none;
+    border: 1px solid gray;
+    border-bottom: 0;
+    height: 18px;
+    background: red;
+    margin-right: 2px;
+    position: relative;
+    top: 1px;
+    outline: 0;
+    .current {
+      background-color: blue;
+      border-bottom: 1px solid gray;
+      color: black;
+      cursor: default; } }
+  a:hover {
+    background-color: blue; } }
+
+.panes div {
+  display: none;
+  border: 1px solid gray;
+  min-height: 150px;
+  padding: 15px 20px;
+  background: white; }
+
+// =============================== //
+
+// Polypage
+#pp_options {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 4px;
+	background: #f0f0f0;
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.85;
+	font-size: 11px;
+	line-height: 1em;
+}
+#pp_options p {
+  display: inline;
+  color: #aaa;  
+}
+#pp_options ul {
+  display: inline;
+	margin: 0;
+	padding: 0;
+}
+#pp_options li {
+	display: inline;
+	padding: 0 9px;
+}
+#pp_options li a {
+	color: #999;
+}
+#pp_options li a.on {
+	color: #000;
+	background: #d4fb78;
+}

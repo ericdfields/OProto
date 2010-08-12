@@ -1,0 +1,89 @@
+// Colors
+// -----------------------------------------
+
+// Optaros Primary Colors
+$oBlue: #577db2;
+$oOrange: #cf6029;
+$oGrey: #b7b1a4;
+
+// Optaros Secondary Colors
+$oBlack: #1a1919;
+$oSemiBlack: #636463;
+$oTan: #bcba94;
+$oTeal: #5a938c;
+$font-color: #444444;
+
+// Typography
+// -----------------------------------------
+$blueprint-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$blueprint-fixed-font-family: "andale mono", "lucida console", monospace;
+$blueprint-font-size: 12px;
+
+// Grids
+// -----------------------------------------
+
+// Configurable Varibles
+// The number of columns in the grid.
+$blueprint-grid-columns: 24;
+
+// The width of a column
+$blueprint-grid-width: 30px;
+
+// The amount of margin between columns
+$blueprint-grid-margin: 10px;
+$column-full: $blueprint-grid-columns;
+$column-half: $blueprint-grid-columns / 2;
+$column-third: $blueprint-grid-columns / 3;
+$column-quarter: $blueprint-grid-columns / 4;
+$column-fifth: $blueprint-grid-columns / 5;
+$column-sixth: $blueprint-grid-columns / 6;
+$column-eighth: $blueprint-grid-columns / 8;
+
+// Constants
+// $blueprint-grid-outer-width: 40px //($blueprint_grid_width + $blueprint_grid_margin)
+// $blueprint-container-size: 950px //($blueprint_grid_outer_width * $blueprint_grid_columns - $blueprint_grid_margin)
+
+// Imports
+// -----------------------------------------
+// …from compass
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+
+// …from fancy-buttons
+@import "fancy-buttons";
+
+// …from blueprint
+// (all styles)
+//@import blueprint
+//+blueprint
+
+// Individual styles (uncomment above)
+// @import blueprint/colors
+// @import blueprint/debug
+// @import blueprint/form
+@import "blueprint/grid";
+
+// @import blueprint/ie
+// @import blueprint/interaction
+// @import blueprint/print
+@import "blueprint/typography";
+@import "blueprint/utilities";
+
+// CSS3
+// Configurable Variables
+// -----------------------------------------
+// Border-Radius
+$default-border-radius: 8px;
+
+// Transitions
+$default-transition-property: all;
+$default-transition-duration: 0.25s;
+$default-transition-function: ease-out;
+$default-transition-delay: false;
+
+// Reset!
+// -----------------------------------------
+@include global-reset;
+
+@include reset-html5;

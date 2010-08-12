@@ -1,0 +1,9 @@
+// Put your forms styles in this stylesheet
+button {
+  @include fancy-button-structure;
+  @include fancy-button-colors($oBlue);
+  @include fancy-button-size(14px, 4px, 1px); }
+
+button:active {
+  border-width: 2px;
+  @include fancy-button-size(14px, 4px, 2px); }

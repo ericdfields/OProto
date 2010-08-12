@@ -1,0 +1,67 @@
+// Put your generic stite styles in this stylesheet
+@import "base";
+@import "typography";
+@import "forms";
+@import "widgets";
+
+body {
+  background: lighten($oGrey, 20%); }
+
+body.special {
+  background: pink; }
+
+.container {
+  @include container;
+  @include border-radius;
+  @include box-shadow(rgba(0, 0, 0, 0.25), 0, 3px, 3px, 0);
+  background: white;
+  margin: 40px auto; }
+
+.main-header,.main-footer {
+  @include column($column-full); }
+
+.main-section {
+  @include column($column-third * 2); }
+
+.main-rail {
+  @include column($column-third, true); }
+
+.inner {
+  padding: 20px; }
+
+.main-header {
+  background: $oBlue;
+  h1 {
+    color: white; }
+  nav ul {
+    @include reset-box-model;
+    @include reset-list-style;
+    overflow: auto;
+    li {
+      float: left;
+      margin-right: 1em;
+      a {
+        @include transition;
+        color: white;
+        text-decoration: none;
+        padding: 4px 8px;
+        display: block;
+        @include border-radius(4px);
+        font: {
+          weight: bold;
+          size: larger; };
+        text-shadow: 1px 1px 0 darken($oBlue, 20%); }
+      a:hover {
+        background: darken($oBlue, 5%); }
+      a.current {
+        background: darken($oBlue, 10%); } } } }
+
+.main-footer {
+  background: $oOrange;
+  color: white; }
+
+.four04 p {
+  font-size: 24px;
+  text-align: center;
+  margin: 100px 0;
+}

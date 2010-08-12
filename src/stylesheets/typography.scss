@@ -1,0 +1,29 @@
+// Put your typography styles in this stylesheet
+
+@include blueprint-typography-defaults;
+
+body {
+  color: $oBlack;
+  @include blueprint-typography-body; }
+
+h1 {
+  color: $oBlue; }
+
+h2 {
+  color: $oOrange; }
+
+h3 {
+  color: $oSemiBlack; }
+
+// LoVe HAte
+a:link {
+  color: darken($oTeal, 20%); }
+
+a:visited {
+  color: $oTeal; }
+
+a:hover {
+  color: $oOrange; }
+
+a:active {
+  color: $oSemiBlack; }
