@@ -8,6 +8,8 @@ Experienced front-end developers can do a lot by hand very quickly. We're smart 
 
 OProto uses [StaticMatic](http://staticmatic.rubyforge.org/) to alleviate all of these symptoms. An additional dose of [Haml](http://haml-lang.com) makes marking up a document simple and fun again. Side effects include glee, bliss and a rapidly-developing sense of productivity.
 
+We've taken some cues from [Paul Irish & Co's fantastic HTML5 boilerplate](http://html5boilerplate.com/) and integrated it into the starter template files.
+
 ### CSS is too dumb to be productive
 [Lorin Tacket nails it: CSS is a stupid language](http://vimeo.com/11671458). That is, while its certainly the best way to style web content, it lacks some of the basic features of a scripting language most developers are used to: variables, basic functions and simple math. This means that creating CSS from scratch is inevitably a slow process.
 
@@ -119,4 +121,8 @@ OProto is evolving as we continue to test it in internally.
 * more templates (common product page, web app, etc)?
 
 # Fin
-Roadmap was created by Eric D. Fields, Senior UX Developer at Optaros
+Created by Eric D. Fields, Senior UX Developer at Optaros
+
+Copyright Optaros
+
+Dual licensed under MIT and GPL
